@@ -1,0 +1,12 @@
+extends layout
+
+block conteudo
+    #cadastrarNovoUsuario
+        form(action="/cadastrar", method="post")
+            input(type="text", name="email", placeholder="E-mail", required)
+            input(type="text", name="nome" placeholder="Nome", required)
+            input(type="password", name="senha", placeholder="senha", required)
+            input(type="submit", value="Cadastrar")
+
+        if mensagem
+            span= mensagem
